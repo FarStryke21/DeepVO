@@ -1,0 +1,39 @@
+
+==================================================
+n_processors: 8
+device: cpu
+data_dir: C:/Users/amanc/OneDrive/Desktop/787 Project/DeepVO-main/dataset
+image_dir: C:/Users/amanc/OneDrive/Desktop/787 Project/DeepVO-main/dataset/sequences/
+pose_dir: C:/Users/amanc/OneDrive/Desktop/787 Project/DeepVO-main/dataset/poses/
+train_video: ['01', '02', '08', '09']
+valid_video: ['03', '05']
+test_video: ['03', '04', '05', '06', '07', '10']
+seq_len: 7
+overlap: 1
+img_w: 640
+img_h: 192
+is_hflip: False
+rnn_hidden_size: 10
+conv_dropout: (0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.5)
+rnn_dropout_out: 0.2
+rnn_dropout_between: 0.2
+batch_norm: True
+epochs: 1
+batch_size: 12
+pin_mem: True
+optim_lr: 0.001
+optim_decay: 5e-06
+optim_lr_decay_factor: 0.1
+optim_lr_step: 60
+pretrained_flownet: flownets_bn_EPE2.459.pth.tar
+resume: False
+resume_t_or_v: .latest
+experiment_name: experiment_name
+save_path: experiments/experiment_name
+name: t01020809_v030405060710_im192x640_s7_b12
+load_model_path: experiments/experiment_name/models/t01020809_v030405060710_im192x640_s7_b12.model.latest
+load_optimizer_path: experiments/experiment_name/models/t01020809_v030405060710_im192x640_s7_b12.optimizer.latest
+record_path: experiments/experiment_name/records/t01020809_v030405060710_im192x640_s7_b12.txt
+save_model_path: experiments/experiment_name/models/t01020809_v030405060710_im192x640_s7_b12.model
+save_optimzer_path: experiments/experiment_name/models/t01020809_v030405060710_im192x640_s7_b12.optimizer
+==================================================
